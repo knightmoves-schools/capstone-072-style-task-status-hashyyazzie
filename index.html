@@ -1,30 +1,60 @@
-<style>
-    /* Keeps description and status on the same line */
-    .row {
-        display: flex;
-        align-items: center;
-    }
+<!DOCTYPE html>
+<html>
 
-    /* Requirement: Pad description and status with 5px on all sides */
-    .row div {
-        padding: 5px;
-    }
+<head>
+    <title>Task App</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 1. Display description and status on the same line */
+        .row {
+            display: flex;
+            align-items: center;
+        }
 
-    /* Requirement: Round the corners to 10px */
-    .task-status {
-        border-radius: 10px;
-    }
+        /* 2. Requirement: Pad description and status with 5px on all sides */
+        .row div {
+            padding: 5px;
+        }
 
-    /* Status-specific background colors */
-    .todo {
-        background-color: red;
-    }
+        /* 3. Requirement: Round the corners of the task-status to 10px */
+        .task-status {
+            border-radius: 10px;
+            display: inline-block; /* Ensures background and rounding wrap the text properly */
+        }
 
-    .doing {
-        background-color: yellow;
-    }
+        /* 4. Background color requirements */
+        .todo {
+            background-color: red;
+        }
 
-    .done {
-        background-color: green;
-    }
-</style>
+        .doing {
+            background-color: yellow;
+        }
+
+        .done {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tasks">
+        <div id="task-row-1" class="row">
+            <div id="task-description-1">pack spikes for track meet</div>
+            <div id="task-status-1" class="todo task-status">todo</div>
+        </div>
+
+        <div id="task-row-2" class="row">
+            <div id="task-description-2">write draft english paper</div>
+            <div id="task-status-2" class="doing task-status">doing</div>
+        </div>
+
+        <div id="task-row-3" class="row">
+            <div id="task-description-3">finish math homework</div>
+            <div id="task-status-3" class="done task-status">done</div>
+        </div>
+    </div>
+</body>
+
+</html>
